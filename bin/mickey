@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+require('commander')
+  .version(require('../package').version)
+  .usage('<command> [options]')
+  .command('init', 'generate a new mickey project')
+  .command('model', 'generate a new mickey model')
+  .parse(process.argv)

@@ -1,2 +1,4 @@
 # mickey-cli
-Command line utility for mickey
+
+> Command line utility for mickey
+

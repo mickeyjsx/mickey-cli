@@ -1,0 +1,13 @@
+# /node_modules/* and /bower_components/* ignored by default
+
+{{#mock}}
+./mock/*
+{{/mock}}
+{{#i18n}}
+./i18n_messages/*
+./i18n.config.js
+{{/i18n}}
+./.porscherc.js
+{{#mock}}
+./.porscherc.mock.js
+{{/mock}}
