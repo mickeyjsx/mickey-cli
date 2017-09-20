@@ -17,7 +17,7 @@ if (update) {
   console.log()
   console.log(chalk.gray('     ----------------------------------------------'))
   console.log(`    ${chalk.gray('/')}        update available ${chalk.gray(current)} → ${chalk.green(latest)}        ${chalk.gray('\\')}`)
-  console.log(`    ${chalk.gray('\\')}   run ${chalk.cyan('(sudo) npm i -g mickey-cli')} to update   ${chalk.gray('/')}`)
+  console.log(`    ${chalk.gray('\\')}   run ${chalk.cyan(`(sudo) npm i -g ${pkg.name}`)} to update   ${chalk.gray('/')}`)
   console.log(chalk.gray('     ----------------------------------------------'))
   console.log()
 }
