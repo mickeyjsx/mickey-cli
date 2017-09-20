@@ -4,10 +4,7 @@ import updateNotifier from 'update-notifier'
 import pkg from '../package.json'
 
 const notifier = updateNotifier({ pkg })
-const update = notifier.update || {
-  latest: '1.0.1',
-  current: '1.0.0',
-}
+const update = notifier.update
 
 if (update) {
   const latest = update.latest
