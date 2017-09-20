@@ -1,6 +1,6 @@
 {
   "name": "mickey-cli",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Command line utility for mickey",
   "bin": {
     "mickey": "bin/mickey",
@@ -9,6 +9,7 @@
   "keywords": [
     "mickey",
     "cli",
+    "utility",
     "framework",
     "frontend"
   ],
@@ -27,6 +28,7 @@
   "homepage": "https://github.com/mickeyjsx/mickey-cli#readme",
   "dependencies": {
     "async": "^2.5.0",
+    "babel-runtime": "^6.26.0",
     "chalk": "^2.1.0",
     "commander": "^2.11.0",
     "consolidate": "^0.14.5",
@@ -37,6 +39,7 @@
     "minimatch": "^3.0.4",
     "multimatch": "^2.1.0",
     "read-metadata": "^1.0.0",
+    "update-notifier": "^2.2.0",
     "validate-npm-package-name": "^3.0.0"
   },
   "devDependencies": {
@@ -62,9 +65,9 @@
     "rimraf": "^2.6.1"
   },
   "files": [
+    "bin",
     "lib",
-    "presets",
-    "src"
+    "presets"
   ],
   "nyc": {
     "include": [

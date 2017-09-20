@@ -7,6 +7,7 @@ var program = require('commander')
 var inquirer = require('inquirer')
 var logger = require('../lib/logger')
 var generate = require('../lib/init/generate')
+require('../lib/update')
 
 // usage
 program
@@ -15,7 +16,7 @@ program
 
 
 // settings
-var templatePath = path.resolve('./presets/default')
+var templatePath = path.resolve(__dirname, '../presets/default')
 var rawName = program.args[0]
 var inPlace = !rawName || rawName === '.'
 var name = inPlace ? path.relative('../', process.cwd()) : rawName

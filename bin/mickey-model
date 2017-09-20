@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
+/* eslint-disable */
 var program = require('commander')
-
+require('../lib/update')
 
 program
   .usage('[project-name]')
