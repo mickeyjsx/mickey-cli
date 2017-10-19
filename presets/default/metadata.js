@@ -90,5 +90,5 @@ module.exports = {
     'src/routers.jsx': 'router',
     'mock/**/*': 'mock',
   },
-  completeMessage: 'Get start:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\n',
+  completeMessage: 'Get start:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm start\n\n',
 }
