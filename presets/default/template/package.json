@@ -39,7 +39,7 @@
     {{/if}}
     "rimraf": "^2.6.1",
     "husky": "^0.14.3",
-    "porsche": "^1.0.7",
+    "porsche": "^1.0.8",
     "redbox-react": "^1.5.0"
   },
   "dependencies": {
