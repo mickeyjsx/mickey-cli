@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import style from './Layout.less'
+import React from 'react';
+import PropTypes from 'prop-types';
+import style from './Layout.less';
 
 const Layout = props => (
   <div className={style.layout}>
@@ -13,10 +13,10 @@ const Layout = props => (
       >mickey</a>
     </div>
   </div>
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.element.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

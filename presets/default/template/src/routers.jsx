@@ -1,15 +1,15 @@
-import React from 'react'
+import React from 'react';
 {{#if_eq routerConfig "hash"}}
-import { HashRouter as Router, Route, Switch } from 'mickey'
+import { HashRouter as Router, Route, Switch } from 'mickey';
 {{/if_eq}}
 {{#if_eq routerConfig "browser"}}
-import { BrowserRouter as Router, Route, Switch } from 'mickey'
+import { BrowserRouter as Router, Route, Switch } from 'mickey';
 {{/if_eq}}
 {{#if_eq routerConfig "memory"}}
-import { MemoryRouter as Router, Route, Switch } from 'mickey'
+import { MemoryRouter as Router, Route, Switch } from 'mickey';
 {{/if_eq}}
-import Layout from './components/Layout'
-import Main from './components/Main'
+import Layout from './components/Layout';
+import Main from './components/Main';
 
 const Routers = () => (
   <Router>
@@ -19,6 +19,6 @@ const Routers = () => (
       </Switch>
     </Layout>
   </Router>
-)
+);
 
-export default Routers
+export default Routers;
