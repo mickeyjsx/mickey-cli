@@ -1,3 +1,4 @@
+import React from 'react';
 {{^router}}
 import Layout from './Layout';
 {{/router}}
