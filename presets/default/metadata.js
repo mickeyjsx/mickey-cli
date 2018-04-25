@@ -64,6 +64,10 @@ module.exports = {
       type: 'confirm',
       message: 'Use mickey model validator to validate your models?',
     },
+    entry: {
+      type: 'confirm',
+      message: 'Create entry file `index.html` ?',
+    },
     i18n: {
       type: 'confirm',
       message: 'Use i18n?',
@@ -88,6 +92,7 @@ module.exports = {
     '.porscherc.mock.js': 'mock',
     'i18n.config.js': 'i18n',
     'src/routers.jsx': 'router',
+    'src/index.html': 'entry',
     'mock/**/*': 'mock',
   },
   completeMessage: 'Get start:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm start\n\n',

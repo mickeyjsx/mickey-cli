@@ -1,12 +1,14 @@
 import React from 'react';
-import { message } from 'antd';
 import createApp from 'mickey';
+import { message } from 'antd';
 {{#if router}}
 import Routers from './routers';
 {{else}}
 import Main from './components/Main';
 {{/if}}
-import './index.html';;
+{{#entry}}
+import './index.html';
+{{/entry}}
 
 const app = createApp({
   {{#router}}
