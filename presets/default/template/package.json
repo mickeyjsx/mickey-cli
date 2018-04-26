@@ -43,12 +43,13 @@
     "redbox-react": "^1.5.0"
   },
   "dependencies": {
-    "antd": "^2.12.8",
+    "antd": "^3.4.3",
     "es6-promise": "^4.1.1",
     "isomorphic-fetch": "^2.2.1",
-    "mickey": "^0.3.0",
-    "prop-types": "^15.5.10",
-    "react": "^15.6.1"
+    "mickey": "^1.2.4",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
   },
   "scripts": {
     {{#if i18n}}
