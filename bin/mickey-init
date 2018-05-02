@@ -22,6 +22,25 @@ var inPlace = !rawName || rawName === '.'
 var name = inPlace ? path.relative('../', process.cwd()) : rawName
 var to = path.resolve(rawName || '.')
 
+function getTemplatePath(template) {
+  return path.resolve(__dirname, '../presets/' + template)
+}
+
+function selectTemplate() {
+  return inquirer
+    .prompt([
+      {
+        type: 'list',
+        name: 'template',
+        message: 'Please pick a preset: ',
+        choices: [
+          'mickey-with-umi',
+          'mickey-with-roadhog',
+        ]
+      },
+    ])
+}
+
 // padding
 console.log()
 process.on('exit', function () {
@@ -29,7 +48,6 @@ process.on('exit', function () {
 })
 
 
-//
 if (exists(to)) {
   inquirer.prompt([{
     type: 'confirm',
@@ -46,16 +64,20 @@ if (exists(to)) {
   run()
 }
 
+
 function run() {
-  if (exists(templatePath)) {
-    generate(name, templatePath, to, function (err) {
-      if (err) {
-        logger.fatal(err)
-      }
-      console.log()
-      logger.success('Generated "%s".', name)
-    })
-  } else {
-    logger.fatal('Generated failed.')
-  }
+  selectTemplate().then(({ template }) => {
+    const templatePath = getTemplatePath(template)
+    if (exists(templatePath)) {
+      generate(name, templatePath, to, function (err) {
+        if (err) {
+          logger.fatal(err)
+        }
+        console.log()
+        logger.success('Generated "%s".', name)
+      })
+    } else {
+      logger.fatal('Generated failed.')
+    }
+  })
 }
