@@ -1,0 +1,12 @@
+[
+  {
+    "path": "/",
+    "exact": true,
+    "component": "./src/pages/main/index.jsx"
+  },
+  {
+    "path": "/:name?",
+    "exact": true,
+    "component": "./src/pages/main/index.jsx"
+  }
+]
