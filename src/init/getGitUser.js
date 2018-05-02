@@ -10,6 +10,13 @@ export default function getGitUser() {
   } catch (e) { } // eslint-disable-line
 
   name = name && JSON.stringify(name.toString().trim()).slice(1, -1)
-  email = email && (` <${email.toString().trim()}>`)
-  return (name || '') + (email || '')
+  email = email ? email.toString().trim() : ''
+  const user = {
+    name,
+    email,
+  }
+
+  user.toString = () => `${user.name}${user.email ? `<${user.email}>` : ''}`
+
+  return user
 }
