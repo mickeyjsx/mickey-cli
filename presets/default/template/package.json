@@ -2,7 +2,10 @@
   "name": "{{ name }}",
   "version": "{{ version }}",
   "description": "{{ description }}",
-  "author": "{{ author }}",
+    "author": {
+    "name": "{{ author.name }}",
+    "email": "{{ author.email }}"
+  },
   "private": true,
   "devDependencies": {
     {{#if i18n}}
@@ -16,10 +19,10 @@
     "babel-plugin-react-intl": "^2.3.1",
     {{/if}}
     {{#if loader}}
-    "babel-plugin-mickey-model-loader": "^0.0.5",
+    "babel-plugin-mickey-model-loader": "^0.1.1",
     {{/if}}
     {{#if validator}}
-    "babel-plugin-mickey-model-validator": "^1.0.4",
+    "babel-plugin-mickey-model-validator": "^1.0.5",
     {{/if}}
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-export-extensions": "^6.22.0",
