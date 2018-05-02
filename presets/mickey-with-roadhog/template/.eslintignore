@@ -1,0 +1,6 @@
+# /node_modules/* and /bower_components/* ignored by default
+
+.wepackrc.js
+.roadhogrc.mock.js
+./mock/*
+./i18n.config.js
